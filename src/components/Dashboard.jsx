@@ -2,6 +2,7 @@ import { useState } from "react";
 import WorkshopList from "./WorkshopList";
 import AddWorkshop from "./AddWorkshop";
 import Sidbar from "./sidbar/Sidbar";
+import { UsersTable } from "./userstable/UsersTable";
 
 function Dashboard({ user, onLogout }) {
   const [activeTab, setActiveTab] = useState("workshops");
@@ -31,6 +32,7 @@ function Dashboard({ user, onLogout }) {
   return (
     <div className="min-h-screen bg-gray-50">
       <Sidbar />
+      <UsersTable/>
     </div>
   );
 }

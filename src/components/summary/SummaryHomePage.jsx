@@ -1,6 +1,8 @@
 import React from "react";
-import work from "../../assets/summaryIconHomePage/workCoun.png";
-
+import work from "../../assets/summaryIconHomePage/workshop.png";
+import checks from "../../assets/summaryIconHomePage/checks.png"
+import spendings from "../../assets/summaryIconHomePage/spendings.png"
+import money from "../../assets/summaryIconHomePage/money.png"
 const SummaryHomePage = () => {
   const summatyItems = [
     {
@@ -15,21 +17,21 @@ const SummaryHomePage = () => {
       title: "المصروفات",
       value: "72,540",
       change: "12.5%",
-      icon: "users",
+      icon: spendings,
     },
     {
       id: 3,
       title: "الشيكات المفتوحة",
       value: "72,540",
       change: "12.5%",
-      icon: "users",
+      icon: checks,
     },
     {
       id: 4,
       title: "المبالغ المتبقية",
       value: "72,540",
       change: "12.5%",
-      icon: "users",
+      icon: money,
     },
   ];
 
@@ -42,23 +44,7 @@ const SummaryHomePage = () => {
               <div className="flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl dark:bg-neutral-900 dark:border-neutral-800">
                 <div className="p-4 md:p-5 flex gap-x-4">
                   <div className="shrink-0 flex justify-center items-center size-11 bg-gray-100 rounded-lg dark:bg-neutral-800">
-                    <svg
-                      className="shrink-0 size-5 text-gray-600 dark:text-neutral-400"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                      <circle cx="9" cy="7" r="4" />
-                      <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                    </svg>
+                   <img src={item.icon} alt={item.title} />
                   </div>
 
                   <div className="grow">
@@ -104,6 +90,7 @@ const SummaryHomePage = () => {
             </React.Fragment>
           ))}
         </div>
+        
       </div>
     </div>
   );
